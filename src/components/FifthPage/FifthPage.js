@@ -11,7 +11,7 @@ class FifthPage extends Component{
             <div>
                 <h1>Thank for leaving Feedback!</h1>
                 <input></input>
-                <li><Link to="/">Home</Link></li>
+                <li><Link to="/">Start all over again</Link></li>
           
             </div>
         )
