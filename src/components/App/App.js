@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import './App.css';
-import Feedback from '../Feedback/Feedback';
+import{ BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+import FirstPage  from '../FirstPage/FirstPage';
+import SecondPage   from '../SecondPage/SecondPage';
+import ThirdPage   from '../ThirdPage/ThirdPage';
+import FourthPage        from '../FourthPage/FourthPage';
+import FifthPage  from '../FifthPage/FifthPage';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Feedback!</h1>
-          <h4><i>Don't forget it!</i></h4>
-        </header>
-        <Feedback />
-        <br/>
-      </div>
+     <Router>
+       <div>
+         <Route exact path="/" component = { FirstPage } />
+         <Route exact path="/2" component = { SecondPage } />
+         <Route exact path="/3" component = { ThirdPage } />
+         <Route exact path="/4" component = { FourthPage } />
+         <Route exact path="/5" component = { FifthPage } />
+
+       </div>
+     </Router>
     );
   }
 }

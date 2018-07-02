@@ -2,31 +2,29 @@
 
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
+import { Router } from 'react-router-dom';
+import ReactDOM from 'react-dom';
+import App from '../App/App';
+import { Switch, Route } from 'react-router-dom';
 
-import FirstPage  from '../FirstPage/FirstPage';
-import SecondPage   from '../SecondPage/SecondPage';
-import ThirdPage   from '../ThirdPage/ThirdPage';
-import FourthPage        from '../FourthPage/FourthPage';
-import FifthPage  from '../FifthPage/FifthPage';
-
+ReactDOM.render(
+    <Router>
+        <App />
+    </Router>,
+    document.getElementById('root')
+);
 
 
 class Feedback extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          step: 1,
-          fieldValues = {
-              FirstPage: null,
-              SecondPage: null,
-              ThirdPage: null,
-              FourthPage: null,
-              FifthPage: null
-          }
+          step: 1
         };
       }
- 
+    
+
+
 	render() {
 		switch (this.state.step) {
 			case 1:
