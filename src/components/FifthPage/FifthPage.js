@@ -1,17 +1,28 @@
-
-
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import{ BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import axios from 'axios';
 
+// const mapReduxStateToProps = (reduxStore) => ({
+//     reduxStore 
+// });
 
-const mapReduxStateToProps = (reduxStore) => ({
-    reduxStore 
-});
+const mapReduxStateToProps = (reduxStore) => {
+    return{
+        reduxStore:reduxStore
+    }
+}
 
 
 class FifthPage extends Component{
  
+    componentDidMount(){
+        const formData =this.props.reduxStore.feedback
+        axios.post('feedback',formData)
+        .then( (response ) => {
+            console.log(response)
+        })
+    }
 
     
     render(){
@@ -26,7 +37,7 @@ class FifthPage extends Component{
     }
 }
 
-export default FifthPage;
+export default connect(mapReduxStateToProps)(FifthPage);
 
                 
                
