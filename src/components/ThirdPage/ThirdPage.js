@@ -50,4 +50,4 @@ class ThirdPage extends Component{
     }
 }
 
-export default ThirdPage;
+export default connect(mapReduxStateToProps)(ThirdPage);

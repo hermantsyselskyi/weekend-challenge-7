@@ -44,13 +44,13 @@ class FourthPage extends Component{
                 <h1>Any comments you want to leave?</h1>
                 <input onChange={this.handleChange} placeholder="Comment!" 
                         value={this.state.comment} name="Comment"/>
-                    <button onClick={this.handleSubmit}><Link to="/4">Next</Link></button>
+                    <button onClick={this.handleSubmit}><Link to="/5">Next</Link></button>
             </div>
         )
     }
 }
 
-export default FourthPage;
+export default connect(mapReduxStateToProps)(FourthPage);
 
                 
                

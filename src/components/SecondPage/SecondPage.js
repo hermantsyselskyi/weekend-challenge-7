@@ -50,4 +50,4 @@ class SecondPage extends Component{
     }
 }
 
-export default connect(mapReduxStateToProps) (SecondPage);
+export default connect(mapReduxStateToProps)(SecondPage);
